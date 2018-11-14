@@ -2,11 +2,10 @@
 #PBS -m abe
 #PBS -N ejercicio27
 
-cd $PBS_O_WORKDIR # este es el directorio desde donde se ejecuto qsub
+cd $PBS_O_WORKDIR
 make clean
 make
-
-mpirun -np 4 -hostfile hostfile ./Hello
+mpirun -np 4 ./Hello
 echo Realizado!!
 
 
